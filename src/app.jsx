@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { SrearchAndShortList } from "./components/SrearchAndShortList";
 import { PuppiesList } from "./components/PuppiesList";
 import { NewPuppyForm } from "./components/NewPuppyForm";
+import { puppies } from "./data/puppies";
 
 export function App() {
   return  (
@@ -25,7 +26,7 @@ function Main() {
       <main>
     
         <SrearchAndShortList />
-        <PuppiesList />
+        <PuppiesList puppies={puppies} />
         <NewPuppyForm />
     
     </main>

@@ -1,10 +1,18 @@
-import { puppies } from '../data/puppies';
- 
-export function PuppiesList() {
+
+export function PuppiesList({puppies}) {
   return (
     <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {puppies.map((puppy) => (
-        <li key={puppy.id} className="overflow-clip rounded-lg bg-white shadow-md ring ring-black/5 hover:-translate-y-0.5">
+        <Card key={puppy.id} puppy={puppy} />
+      ))}
+    </ul>
+  );
+}
+
+
+function Card({puppy}) {
+  return (
+         <li key={puppy.id} className="overflow-clip rounded-lg bg-white shadow-md ring ring-black/5 hover:-translate-y-0.5">
           <img className="aspect-square object-cover" alt={puppy.alt} src={puppy.src} />
           <div className="gap flex items-center justify-between p-4 text-sm">
             <div className="flex items-center gap-2">
@@ -30,7 +38,4 @@ export function PuppiesList() {
             </button>
           </div>
         </li>
-      ))}
-    </ul>
-  );
-}
+  )}
