@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import './app.css';
-import { App } from './app';
+import { App } from './App';
 import { StrictMode } from 'react';
 
 const app = document.getElementById('app')
